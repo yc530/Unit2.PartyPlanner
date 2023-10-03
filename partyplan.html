@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>party oh yeah</title>
     <link rel="stylesheet" href="partyplan.css">
-    <script src="partyplan.js" defer></script>
-</head>
-<body>
-    
-</body>
-</html>
+    <script defer src="partyplan.js" ></script>
+    <body>
+        <h1>Parties</h1>
+        <form id="addParties">
+          <label>
+            Name
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Description
+            <input type="text" name="description" />
+          </label>
+          <label>
+            Image URL
+            <input type="text" name="imageUrl" />
+          </label>
+          <button>Add Party</button>
+          <button>Delete Party</button>
+        </form>
+        <ul id="party"></ul>
+      </body>
+    </html>
