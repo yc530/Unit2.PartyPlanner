@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="partyplan.css">
     <script defer src="partyplan.js" ></script>
     <body>
-        <h1>Parties</h1>
-        <form id="addParties">
+        <h1> Party Baby</h1>
+        <form id="addParty">
           <label>
             Name
             <input type="text" name="name" />
@@ -18,11 +18,18 @@
             <input type="text" name="description" />
           </label>
           <label>
-            Image URL
-            <input type="text" name="imageUrl" />
+            Date
+            <input type="date" name="date" />
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" />
+          </label>
+          <label>
+            Time
+            <input type="time" name="time" />
           </label>
           <button>Add Party</button>
-          <button>Delete Party</button>
         </form>
         <ul id="party"></ul>
       </body>
