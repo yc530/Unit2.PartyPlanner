@@ -26,12 +26,14 @@ async function getParty() {
         const response = await fetch(API_URL);
         const json = await response.json();
         state.party=json.data;
+        console.log("party data:", state.party);
+
         }catch(error) {
             console.error(error)
         }
 }
 async function deleteParty(partyId) {
-    console.log ("deleteing party with ID", partyId);
+    console.log ("deleteing party with ID", party.id);
     try {
         const response= await fetch (`${API_URL}/${partyId}`, {
             method: "DELETE",
@@ -66,6 +68,7 @@ function renderParty() {
        deleteButton.textContent = "Delete Party Loser";
        li.append(deleteButton);
        deleteButton.addEventListener("click", () => deleteParty(party._id));
+       addPartyForm.addEventListener("submit", addParty);
 
 
         return li;
@@ -106,5 +109,5 @@ async function addParty(event) {
         console.error(error);
     }
 }
-addPartyForm.addEventListener("submit", addParty);
+
 //  const formData=new FormData(addPartyForm);
